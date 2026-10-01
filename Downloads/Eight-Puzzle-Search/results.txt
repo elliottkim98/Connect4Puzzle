@@ -1,0 +1,124 @@
+# eight_puzzle.py (Final Project)
+#
+# driver/test code for state-space search on Eight Puzzles
+#
+# name: Elliott Kim
+# email: ekim2001@bu.edu
+
+Part 5 Question 3
+
+puzzles with 5-move optimal solutions
+-------------------------------------
+algorithm              num. solved    avg. moves    avg. states tested
+----------------------------------------------------------------------
+random			10			5.8			225.2
+BFS				10			5.0			47.1
+DFS (depth limit 20)	10			16.2			19072.7
+DFS (depth limit 50)	10			48.2			49043.0
+Greedy Search		10			5.4			70.3
+A*				10			5.0			6.5
+
+
+
+puzzles with 10-move optimal solutions
+-------------------------------------
+algorithm              num. solved    avg. moves    avg. states tested
+----------------------------------------------------------------------
+random			10			14.6			9719.1
+BFS				10			10.0			747.4
+DFS (depth limit 20)	10			18.8			24858.0
+DFS (depth limit 50)	10			49.2			92287.3
+Greedy Search		8			76.0			325.625		
+A*				10			10.0			27.3
+
+
+
+puzzles with 15-move optimal solutions
+-------------------------------------
+algorithm              num. solved    avg. moves    avg. states tested
+----------------------------------------------------------------------
+random			10			19.4			26580.8
+BFS				10			15.0			12672.0
+DFS (depth limit 20)	10			17.8			68659.0
+DFS (depth limit 50)	10			48.6			111406.0
+Greedy Search		5			68.2			1295.0		
+A*				10			15.0			313.8
+
+
+Summary: The algorithms mostly worked for all of the moves except for Greedy Search. Random gives appropriate time to find the solutions and mostly is solvable. However, when comparing BFS, and DFS, the BFS is able to find solutions quickly and more effectively that DFS because DFS results have depth limits it took subsequent amount of time and states that are tested. Finally, comparing Greedy and A* algorithms, A* algorithm was expected to be the best and it does give the best output most and all of the time while Greedy is not able to find solutions sometimes. 
+
+
+Part 5 Question 5
+heuristic 2 (the new heuristic)
+-----------
+This heuristic returns a priority number, where each current tiles are interpreted and the numbers of row apart and columns apart from the goal tiles are added to prior. The more less the numbers, current tiles, are apart, the smaller the return value would be.
+
+
+
+Part 6 Question 6
+
+puzzles with 18-move optimal solutions
+--------------------------------------
+algorithm              num. solved    avg. moves    avg. states tested
+----------------------------------------------------------------------
+Greedy (heuristic h1)	5			133.6			541.0
+Greedy (heuristic h2)	10			116.2			450.0
+# Greedy with any 
+# other heuristics
+
+A* (heuristic h1)	10			18.0			1602.0
+A* (heuristic h2)	10			18.0			359.9
+# Greedy with any 
+# other heuristics
+
+
+
+puzzles with 21-move optimal solutions
+--------------------------------------
+algorithm              num. solved    avg. moves    avg. states tested
+----------------------------------------------------------------------
+Greedy (heuristic h1)	4			109.0			416.5
+Greedy (heuristic h2)	10			104.0			379.9
+# Greedy with any 
+# other heuristics
+
+A* (heuristic h1)	10			21.0			6301.7
+A* (heuristic h2)	10			21.0			906.3
+# Greedy with any 
+# other heuristics
+
+
+
+puzzles with 24-move optimal solutions
+--------------------------------------
+algorithm              num. solved    avg. moves    avg. states tested
+----------------------------------------------------------------------
+Greedy (heuristic h1)	4			98.5			1044.25
+Greedy (heuristic h2)	10			111.0			403.8
+# Greedy with any 
+# other heuristics
+
+A* (heuristic h1)	7			24.0			25522.5
+A* (heuristic h2)	10			24.0			2493.0
+# Greedy with any 
+# other heuristics
+
+
+
+puzzles with 27-move optimal solutions
+--------------------------------------
+algorithm              num. solved    avg. moves    avg. states tested
+----------------------------------------------------------------------
+Greedy (heuristic h1)	2			129.0			1270.5
+Greedy (heuristic h2)	10			115.8			418.8
+# Greedy with any 
+# other heuristics
+
+A* (heuristic h1)	0			0			0
+A* (heuristic h2)	10			27.0			12304.8
+# Greedy with any 
+# other heuristics
+
+
+Summary: Looking at the results from the tables above from question 6, in the final two puzzles with 24-move optimal solutions and 27-move optimal solutions, it was difficult to find solutions with h1, the misplaced tiles heuristics. Thus some of the results may have been skipped but due to time instances, the computer was taking too long. However, the h2, new heuristic gave all of the output and with less moves and less states. Also, although, 27 / A* / h2 gave states tested average in a large value, the results were all found. This can be concluded that h2 had a much better result and better choices of states compared to h1. 
+Also, Greedy algorithm with h1 was not able to complete all of the solutions but with the heuristic h2, it gave great results with much lower states tested. 
